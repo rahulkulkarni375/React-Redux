@@ -37,6 +37,8 @@ const counterSlice = createSlice({
 - Import store and add  Provider in the main.jsx 
     ```javascript 
     <Provider store={store}>
+        <App/>
+    <Provider/>
     ```
 
 - Import useSelector, where you want to render it in the UI 
