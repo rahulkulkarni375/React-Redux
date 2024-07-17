@@ -1,15 +1,7 @@
-
 # React Redux
-
-
 React Redux simplifies managing state in React apps using predictable containers and connecting state changes to components efficiently.
 
-
-
-
-
 ## Steps to manage state using redux
-
 - Install packages redux, react-redux and @reduxjs/toolkit 
 ```javascript
 import { Provider, useDispatch, useSelector } from 'react-redux';
@@ -56,17 +48,18 @@ const counter = useSelector(state => state.counter.count);
     dispatch(counterActions.multiply(multiple))    
 ```
 
+# Examples
+| Name | Link     |
+| :-------- | :------- |
+| `User Authentication` | [Link]( https://github.com/rahulkulkarni375/React-Redux/tree/main/Login-Logout-Redux )|
+
 ## Documentation
-
 -[React redux](https://react-redux.js.org/)
+
 ## Tech Stack
-
 **Client:** React, Redux, Bootstrap, Material UI
-
 **Server:** Node, Express
 
-
 ## Feedback
-
 If you have any feedback, please reach out
 
