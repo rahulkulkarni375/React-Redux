@@ -11,7 +11,7 @@ React Redux simplifies managing state in React apps using predictable containers
 ## Steps to manage state using redux
 
 - Install packages redux, react-redux and @reduxjs/toolkit
-- Create a folder and file named as "store.js" and export store.js
+- Create a folder and file named as store and store.js and export store.js
 - Create slices using createSlice
 ```javascript
 const counterSlice = createSlice({
