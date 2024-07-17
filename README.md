@@ -10,7 +10,11 @@ React Redux simplifies managing state in React apps using predictable containers
 
 ## Steps to manage state using redux
 
-- Install packages redux, react-redux and @reduxjs/toolkit
+- Install packages redux, react-redux and @reduxjs/toolkit 
+```javascript
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+```
 - Create a folder and file named as store and store.js and export store.js
 - Create slices using createSlice
 ```javascript
@@ -26,14 +30,14 @@ const counterSlice = createSlice({
 
  ```
 - After creating slice/'s  configure with store 
-    ```javascript 
-    const store = configureStore({reducer : {  counter : counterSlice.reducer } })
-    ```
+```javascript 
+const store = configureStore({reducer : {  counter : counterSlice.reducer } })
+```
 - After configuring with it, configureStore sets up a well-configured Redux store with a single function call, 
           including combining reducers, adding the thunk middleware.
-    ```javascript 
-    export counterActions = counterSlice.actions
-    ```
+```javascript 
+export counterActions = counterSlice.actions
+```
 - Import store and add  Provider in the main.jsx 
     ```javascript 
     <Provider store={store}>
@@ -44,9 +48,9 @@ const counterSlice = createSlice({
 - Import useSelector, where you want to render it in the UI 
 - Import useDispatch & useActions, from where you want to update states 
 - useSelector is used to access the state stored in a Redux store like 
-    ```javascript    
-    const counter = useSelector(state => state.counter.count);
-    ```
+```javascript    
+const counter = useSelector(state => state.counter.count);
+```
 - useDispatch is used to dispatch/send actions to the Redux store like multiple is the name of useState hook and it is a payload
 ```javascript
     dispatch(counterActions.multiply(multiple))    
