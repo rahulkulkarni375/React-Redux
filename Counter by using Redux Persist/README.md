@@ -1,37 +1,34 @@
-npm install redux-persist
+# Redux Persist
+Redux Persist is a library used in conjunction with Redux to manage and persist the state of a Redux store across browser sessions. Essentially, it helps maintain the Redux state even after a page refresh or when the user revisits the app.
+## Introduction
+    
+Redux Persist is a library for managing and persisting the state of a Redux store across sessions. It saves the Redux state to a storage mechanism like localStorage or sessionStorage, allowing the state to be retained even after a page refresh or app restart. Configured with a persistConfig, Redux Persist wraps the Redux store and uses PersistGate to rehydrate the state from storage upon initialization. It also allows selective persistence, enabling you to choose which parts of the state to save. This ensures a seamless user experience by preserving important data between sessions.
 
 
-import { createStore } from 'redux';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage
-import rootReducer from './reducers';
+## Redux Persist Advantages 
+- Storage Mechanism : Redux Persist stores the Redux state in a storage mechanism, like localStorage or sessionStorage in the browser. You can also use other storage options like IndexedDB or custom storage engines.
 
-const persistConfig = {
-  key: 'root',
-  storage,
-};
+- Configuration : You configure Redux Persist by setting up a persistConfig object, which specifies the key for storing the state and the storage engine to use. You also need to wrap your Redux store with a PersistStore and a PersistGate component.
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+- Persist and Rehydrate : When the Redux store is created, Redux Persist will save the state to the specified storage. Upon initialization, it rehydrates the store by loading the saved state from the storage back into Redux.
 
-const store = createStore(persistedReducer);
-const persistor = persistStore(store);
-
-export { store, persistor };
+- Selective Persistence : You can specify which parts of the Redux state should be persisted. This is useful if you only want to save certain pieces of the state and not the entire store.
 
 
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from './store';
-import App from './App';
-
-ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <App />
-    </PersistGate>
-  </Provider>,
-  document.getElementById('root')
-);
+## Usage/Examples
+Clone the project
+```javascript
+git clone / Download ZIP
+```
+Go to te project directory
+```javascript
+cd "Counter by using Redux Persist"
+```
+Install dependencies
+```javascript
+npm i 
+```
+Run the server
+```javascript
+npm run dev
+```
