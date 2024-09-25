@@ -52,6 +52,7 @@ const counter = useSelector(state => state.counter.count);
 | Name | Link     |
 | :-------- | :------- |
 | `User Authentication` | [Link]( https://github.com/rahulkulkarni375/React-Redux/tree/main/Login-Logout-Redux )|
+| `React persist` | [Link](https://github.com/rahulkulkarni375/React-Redux/tree/main/Counter%20by%20using%20Redux%20Persist)|
 
 ## Documentation
 -[React redux](https://react-redux.js.org/)
